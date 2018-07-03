@@ -20,7 +20,7 @@ RUN \
     mkdir /run/nginx/ && \
     cp /includes/nginx.conf /etc/nginx/conf.d/default.conf && \
     cp /includes/php7-fpm.conf /etc/php7/php-fpm.d/h5ai.conf && \
-    cp /includes/supevisord.conf /usr/local/etc/supervisord.conf && \
+    cp /includes/supervisord.conf /usr/local/etc/supervisord.conf && \
     cp /includes/init.sh /init.sh && \
     rm -rf /includes && \
     apk del wget unzip && \
