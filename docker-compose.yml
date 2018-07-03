@@ -1,7 +1,7 @@
 version: '3.6'
 
 services:
-  app:
+  autre:
     image: docker.fricouv.eu/vfricou/h5ai:latest
     ports: 
       - 30080:80
