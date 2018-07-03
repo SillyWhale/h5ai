@@ -4,7 +4,7 @@ LABEL maintainer="Vincent FRICOU <vincent@fricouv.eu>"
 ENV H5_VERSION=0.29.0
 ENV H5_ARTIFACT=h5ai-${H5_VERSION}.zip \
     H5_URL=https://release.larsjung.de/h5ai/ \
-    H5_ROOT=/h5ai/app \
+    H5_ROOT=/h5ai/_h5ai \
     H5_BASE=/h5ai/
 
 COPY includes/ /includes
