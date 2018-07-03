@@ -4,17 +4,19 @@ LABEL maintainer="Vincent FRICOU <vincent@fricouv.eu>"
 ENV H5_VERSION=0.29.0
 ENV H5_ARTIFACT=h5ai-${H5_VERSION}.zip \
     H5_URL=https://release.larsjung.de/h5ai/ \
-    H5_ROOT=/h5ai
+    H5_ROOT=/h5ai/app \
+    H5_BASE=/h5ai/
 
 COPY includes/ /includes
 
 RUN \
     apk -U --no-cache upgrade && \
-    apk add --no-cache wget unzip && \
-    apk add --no-cache nginx supervisor && \
-    apk add --no-cache php7-fpm php7-session php7-json && \
+    apk add --no-cache wget unzip \
+                        nginx supervisor \
+                        php7-fpm php7-session php7-json && \
     wget ${H5_URL}${H5_ARTIFACT} -O /tmp/${H5_ARTIFACT} && \
     unzip /tmp/${H5_ARTIFACT} -d /tmp/ && \
+    mkdir ${H5_BASE} && \
     mv /tmp/_h5ai ${H5_ROOT} && \
     rm /etc/php7/php-fpm.d/www.conf && \
     mkdir /run/nginx/ && \
