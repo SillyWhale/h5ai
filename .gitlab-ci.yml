@@ -29,7 +29,7 @@ release-image:latest:
 release-image:tags:
   stage: release
   script:
-    - docker tag $CONTAINER_BUILD_IMAGE $CONTAINER_RELEASE_IMAGE_TAG
+    - docker tag $CONTAINER_TEST_IMAGE $CONTAINER_RELEASE_IMAGE_TAG
     - docker push $CONTAINER_RELEASE_IMAGE_TAG
   only:
     - tags
