@@ -23,6 +23,7 @@ RUN \
     cp /includes/supervisord.conf /usr/local/supervisord.conf && \
     cp /includes/init.sh /init.sh && \
     rm -rf /includes && \
+    echo 'daemon off;' >> /etc/nginx/nginx.conf && \
     apk del wget unzip && \
     chmod +x /init.sh
 
