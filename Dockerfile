@@ -15,6 +15,7 @@ RUN \
     apk add php7-fpm php7-session php7-json && \
     wget ${H5_URL}${H5_ARTIFACT} -O /tmp/${H5_ARTIFACT} && \
     unzip /tmp/${H5_ARTIFACT} -d /tmp/ && \
+    mv /tmp/_h5ai ${H5_ROOT}
     rm /etc/php7/php-fpm.d/www.conf && \
     mkdir /run/nginx/ && \
     chmod +x /init.sh
