@@ -2,8 +2,8 @@ version: '3.6'
 
 services:
   autre:
-    image: docker.fricouv.eu/vfricou/h5ai:latest
+    image: sillywhale/h5ai:latest
     ports: 
-      - 30080:80
+      - 80:80
     volumes:
-      - /srv/docker-data/h5ai/autre:/h5ai/autre
+      - ${PWD}/data:/h5ai/data

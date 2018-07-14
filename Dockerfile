@@ -1,5 +1,5 @@
 FROM alpine:3.7
-LABEL maintainer="Vincent FRICOU <vincent@fricouv.eu>"
+LABEL maintainer="SillyWhale <contact@sillywhale.wtf>"
 
 ENV H5_VERSION=0.29.0
 ENV H5_ARTIFACT=h5ai-${H5_VERSION}.zip \
