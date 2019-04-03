@@ -1,5 +1,5 @@
 #!/bin/sh
-chown -R nginx:nginx /${H5_BASE}
+chown -R nginx:nginx /${H5_BASE}/_h5ai
 supervisord -c /usr/local/supervisord.conf &
 echo "Logs will displayed in 5 seconds"
 sleep 5
